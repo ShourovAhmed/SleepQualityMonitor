@@ -11,6 +11,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppFirebaseModule } from './app-firebase.module';
 import { AppMaterialModule } from './app-material.module';
 import { RouterModule } from '@angular/router';
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -39,11 +41,11 @@ import { RouterModule } from '@angular/router';
       },
       {
         path:"Contact",
-        component:GraphComponent
+        component:ContactComponent
       },
       {
         path:"About",
-        component:GraphComponent
+        component:AboutComponent
       },
       {
         path: "", redirectTo: "Statistics", pathMatch: "full",
