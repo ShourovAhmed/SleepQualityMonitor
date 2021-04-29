@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "sleep-quality-monitor-sqm": {
+      "hosting": {
+        "SQM-Website": [
+          "sleep-quality-monitor-sqm"
+        ]
+      }
+    }
+  }
+}

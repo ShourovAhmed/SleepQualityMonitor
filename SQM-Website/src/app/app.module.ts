@@ -7,6 +7,9 @@ import { GraphComponent } from './graph/graph.component';
 import { NotesComponent } from './notes/notes.component';
 import { TipsComponent } from './tips/tips.component';
 import { NgApexchartsModule } from "ng-apexcharts";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppFirebaseModule } from './app-firebase.module';
+import { AppMaterialModule } from './app-material.module';
 
 
 @NgModule({
@@ -19,7 +22,10 @@ import { NgApexchartsModule } from "ng-apexcharts";
   ],
   imports: [
     BrowserModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    BrowserAnimationsModule,
+    AppFirebaseModule,
+    AppMaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

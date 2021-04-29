@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+      apiKey: "AIzaSyDlkwC1uN8gki8SyPZhORqoVjEybZXyoAY",
+      authDomain: "sleep-quality-monitor-sqm.firebaseapp.com",
+      projectId: "sleep-quality-monitor-sqm",
+      storageBucket: "sleep-quality-monitor-sqm.appspot.com",
+      messagingSenderId: "132764971116",
+      appId: "1:132764971116:web:429513426a03dab0946849",
+      measurementId: "G-PEHQJKH9VG"
+  },
 };
 
 /*
