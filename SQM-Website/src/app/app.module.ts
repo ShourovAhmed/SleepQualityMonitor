@@ -10,10 +10,6 @@ import { NgApexchartsModule } from "ng-apexcharts";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppFirebaseModule } from './app-firebase.module';
 import { AppMaterialModule } from './app-material.module';
-import { CreateComponent } from './components/create/create.component';
-import { FeedComponent } from './components/feed/feed.component';
-import { ProfileCardComponent } from './components/profile-card/profile-card.component';
-import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
 
 
@@ -24,10 +20,6 @@ import { RouterModule } from '@angular/router';
     GraphComponent,
     NotesComponent,
     TipsComponent,
-    CreateComponent,
-    FeedComponent,
-    ProfileCardComponent,
-    HeaderComponent
   ],
   imports: [
     BrowserModule,
