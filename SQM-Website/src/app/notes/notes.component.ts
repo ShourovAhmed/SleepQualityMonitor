@@ -10,7 +10,7 @@ export class NotesComponent implements OnInit {
   lijst: resultaat[] = [];
 
   note = "";
-  date = "27/04/2021";
+  date = "";
   constructor() { }
 
   ngOnInit(): void {
@@ -19,8 +19,9 @@ export class NotesComponent implements OnInit {
   AddNote(note: string, date : string){
     console.log("AddNote" + note + date)
     this.note = note;
+    
 
-    this.lijst.push(new resultaat(note,this.date))
+    this.lijst.push(new resultaat(note, date))
    
     console.log(this.lijst)    
   }

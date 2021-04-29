@@ -1,6 +1,8 @@
+
 <div>
-    <input #inNote type="string" id="note" name="note" placeholder="Insert notes here...">
-    <button (click)="AddNote(inNote.value, this.date)">Add</button>
+    <input type="date" #inDate>
+    <input #inNote type="string" id="note" placeholder="Insert notes here...">
+    <button (click)="AddNote(inNote.value, inDate.value)">Add</button>
 </div>
 <div>
     <table>
