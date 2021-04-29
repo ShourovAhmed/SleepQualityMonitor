@@ -6,6 +6,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { GraphComponent } from './graph/graph.component';
 import { NotesComponent } from './notes/notes.component';
 import { TipsComponent } from './tips/tips.component';
+import { NgApexchartsModule } from "ng-apexcharts";
+
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { TipsComponent } from './tips/tips.component';
     TipsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgApexchartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
