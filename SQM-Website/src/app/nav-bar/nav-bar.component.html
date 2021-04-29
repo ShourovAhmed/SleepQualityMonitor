@@ -18,11 +18,11 @@
   
     <div id="navbarMenu" class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item" href=""> <!-- TODO Naar homepagina -->
+        <a class="navbar-item" [routerLink]="['Statistics']" [routerLinkActive]="['is-danger']">
           Statistics
         </a>
 
-        <a class="navbar-item">
+        <a class="navbar-item" [routerLink]="['Journal']" [routerLinkActive]="['is-danger']">
           Journal
         </a>
   
@@ -32,10 +32,10 @@
           </a>
   
           <div class="navbar-dropdown">
-            <a class="navbar-item" href=""><!-- TODO Naar nieuwe about pagina -->
+            <a class="navbar-item" [routerLink]="['About']" [routerLinkActive]="['is-danger']"> <!-- TODO Naar nieuwe about pagina -->
               About
             </a>
-            <a class="navbar-item" href=""> <!-- TODO Naar nieuwe contact pagina -->
+            <a class="navbar-item" [routerLink]="['Contact']" [routerLinkActive]="['is-danger']"> <!-- TODO Naar nieuwe contact pagina -->
               Contact
             </a>
             <hr class="navbar-divider">
@@ -49,9 +49,6 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <!--<a class="button is-primary">
-              <strong>Sign up</strong>
-            </a>-->
             <a class="button is-light">
               Log in
             </a>

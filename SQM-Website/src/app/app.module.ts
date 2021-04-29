@@ -14,6 +14,7 @@ import { CreateComponent } from './components/create/create.component';
 import { FeedComponent } from './components/feed/feed.component';
 import { ProfileCardComponent } from './components/profile-card/profile-card.component';
 import { HeaderComponent } from './components/header/header.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -34,6 +35,35 @@ import { HeaderComponent } from './components/header/header.component';
     BrowserAnimationsModule,
     AppFirebaseModule,
     AppMaterialModule,
+    NgApexchartsModule,
+    RouterModule.forRoot([
+      {
+        path:"Statistics",
+        component:GraphComponent
+      },
+      {
+        path:"Journal",
+        component:GraphComponent
+      },
+      {
+        path:"Contact",
+        component:GraphComponent
+      },
+      {
+        path:"About",
+        component:GraphComponent
+      },
+      {
+        path: "", redirectTo: "Statistics", pathMatch: "full",
+      },
+      {
+        path: "**", redirectTo: "Statistics"
+      }
+  
+      ],
+      {
+        useHash : true  // zodat er geen request naar de server gestuurd worden voor nieuwe pagina's (deze zijn al beschikbaar op het apparaat)
+      }),
   ],
   providers: [],
   bootstrap: [AppComponent]
