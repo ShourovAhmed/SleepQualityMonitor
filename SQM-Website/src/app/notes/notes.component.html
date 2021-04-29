@@ -1,3 +1,16 @@
 <div>
-    <h1>Notes</h1>
+    <input #inNote type="string" id="note" name="note" placeholder="Insert notes here...">
+    <button (click)="AddNote(inNote.value, this.date)">Add</button>
+</div>
+<div>
+    <table>
+        <tr>
+            <td>Date</td>
+            <td>Note</td>
+        </tr>
+        <tr *ngFor="let item of lijst">
+            <td>{{item.date}}</td>
+            <td>{{item.note}}</td>
+        </tr>
+    </table>
 </div>
