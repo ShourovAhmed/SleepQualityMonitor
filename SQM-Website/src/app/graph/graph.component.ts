@@ -41,13 +41,9 @@ export class GraphComponent{
     this.chartOptions = {
       series: [
         {
-          name: "High - 2013",
-          data: [28, 29, 33, 36, 32, 32, 33]
+          name: "29/04/2021",
+          data: [59, 63, 64, 62, 61, 65, 57, 61, 65, 58, 61, 58, 54, 56, 53, 69, 50, 57, 58, 47, 27, 57, 54, 68, 81]
         },
-        {
-          name: "Low - 2013",
-          data: [12, 11, 14, 18, 17, 13, 13]
-        }
       ],
       chart: {
         height: 350,
@@ -72,7 +68,7 @@ export class GraphComponent{
         curve: "smooth"
       },
       title: {
-        text: "Average High & Low Temperature",
+        text: "Average Heart Rate",
         align: "left"
       },
       grid: {
@@ -86,17 +82,17 @@ export class GraphComponent{
         size: 1
       },
       xaxis: {
-        categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+        categories: ["05:58", "06:03", "06:08", "06:13", "06:18", "06:23", "06:28", "06:33", "06:38", "06:43", "06:48", "06:53", "06:58", "07:03", "07:08", "07:13", "07:18", "07:23", "07:28", "07:33", "07:38", "07:43", "07:48", "07:53", "07:58"],
         title: {
-          text: "Month"
+          text: "Time"
         }
       },
       yaxis: {
         title: {
-          text: "Temperature"
+          text: "BPM"
         },
-        min: 5,
-        max: 40
+        min: 45,
+        max: 85
       },
       legend: {
         position: "top",
