@@ -36,6 +36,8 @@ export type ChartOptions = {
 export class GraphComponent{
   @ViewChild("chart") chart: ChartComponent;
   public chartOptions: Partial<ChartOptions>;
+  public chart2options: Partial<ChartOptions>;
+
   
   //Deze data komt van de HRM en wordt uit de database gehaald, wanneer dit uiteindelijk lukt
   DB_Timestamps = ["05:58", "06:03", "06:08", "06:13", "06:18", "06:23", "06:28", "06:33", "06:38", "06:43", "06:48", "06:53", "06:58", "07:03", "07:08", "07:13", "07:18", "07:23", "07:28", "07:33", "07:38", "07:43", "07:48", "07:53", "07:58"]
@@ -106,6 +108,50 @@ export class GraphComponent{
         offsetX: -5
       }
     };
+
+    this.chart2options = {
+      series: [
+        {
+          name: "chart2",
+          data: this.generateDayWiseTimeSeries(
+            new Date("11 Feb 2017").getTime(),
+            20,
+            {
+              min: 10,
+              max: 30
+            }
+          )
+        }
+      ],
+      chart: {
+        id: "tw",
+        group: "social",
+        type: "line",
+        height: 160
+      },
+      colors: ["#546E7A"],
+      yaxis: {
+        tickAmount: 2,
+        labels: {
+          minWidth: 40
+        }
+      }
+    };
+  }
+
+  public generateDayWiseTimeSeries(baseval, count, yrange): any[] {
+    let i = 0;
+    let series = [];
+    while (i < count) {
+      var x = baseval;
+      var y =
+        Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
+
+      series.push([x, y]);
+      baseval += 86400000;
+      i++;
+    }
+    return series;
   }
 }
 
